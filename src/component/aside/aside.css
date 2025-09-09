@@ -1,0 +1,43 @@
+aside{
+    max-width: 250px;
+    height: calc(100dvh - 24.55px);
+    position: sticky;
+    left: 0;
+    top: 24.55px;
+    border-top: 1px solid white;
+    background-color: var(--primary-color);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 100%;
+}
+
+.logo img{
+    height: 100px;
+    width: 100%;
+}
+
+.page-element{
+ padding: 10px;
+ color: var(--color-white);   
+
+}
+.element-flex{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    height: 50px;
+    
+    
+}
+
+.element-flex span{
+    font-family: "Lato", sans-serif;
+    font-size: 20px;
+    line-height: 0;
+    padding: 3px 0 0 0;
+}

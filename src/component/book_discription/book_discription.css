@@ -1,0 +1,158 @@
+
+
+.upper-section-discription{
+    position: relative;
+    height: 380px;
+}
+
+.upper-banner{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.upper-banner img{
+    width: 100%;
+    height: 100%;
+}
+
+.upper-banner::before{
+    content: '';
+    height: 100%;
+    width: 100%;
+    background-color: rgba(57, 57, 57, 0.7);
+    position: absolute;
+    top: 0;
+    backdrop-filter: blur(8px);
+
+}
+
+
+.book_image-abs{
+    position: absolute;
+    left: 100px;
+    top: 90px;
+    /* width: 100%; */
+    height: 100%;
+}
+
+.book_image-abs img{
+    width: 300px;
+    height: 400px;
+}
+
+.book-info-header{
+    position: absolute;
+    top: 100px;
+    left: 500px;
+}
+
+.book-info-header p{
+    margin: 0;
+    color: var(--color-white);
+
+
+}
+
+.book-info-header h1{
+    line-height: 70px;
+    max-width: 700px;
+    color: var(--color-white);
+    font-family: "Playfair Display", serif;
+    font-size: 60px;
+    font-weight: 700;
+}
+.author-section{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 10px 0 0 0;
+}
+
+.profile-author{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.author-section h3{
+    font-family: "Playfair Display", serif;
+    font-style: italic;
+    color: var(--color-white);
+    letter-spacing: 2px;
+    font-size: 22px;
+
+}
+
+.rating-section svg{
+    color: rgb(209, 209, 22);
+    fill: rgb(209, 209, 22);
+    height: 20px;
+}
+
+.rating-section{
+    margin: 30px 0 0 0;
+}
+
+.section-bottom-description{
+   max-width: 900px;
+   margin: 30px 0 0 500px;
+}
+
+.section-bottom-description span{
+    color: var(--color-black);
+  display: block;
+  font-size:  20px;
+  line-height: 30px;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.section-bottom-description h2{
+    font-style: italic;
+    font-size: 28px;
+    margin: 40px 0 0 0;
+    font-family: "Playfair Display", serif;
+}
+
+.quantity-section{
+    margin: 20px  0 0 0;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.incr-dicr{
+    color: var(--color-white);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 3px;
+    /* border: 1px solid var(--color-black); */
+    background-color: var(--primary-color);
+}
+.incr-dicr button{
+    color: var(--color-white);
+
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+}
+.section-bottom-description h6{
+    font-size: 14px;
+    margin: 0 0 10px 0 ;
+    color: var(--primary-color);
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-style: italic;
+}
+
+.book_image-abs h6{
+    font-size: 20px;
+    color: var(--primary-color);
+    font-family: "Playfair Display", serif;
+}

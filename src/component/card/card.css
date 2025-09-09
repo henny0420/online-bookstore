@@ -1,0 +1,283 @@
+
+
+
+
+.card-item{
+ display: flex;
+ flex-direction: column;
+ justify-content: space-between;
+ /* gap: 5px; */
+ width: 100%;
+}
+
+.card-upper-section{
+ display: flex;
+ flex-direction: column;
+ justify-content: space-between;
+ width: 100%;
+ position: relative;
+ overflow: hidden;
+ border-radius: 3px;
+ border: 1px solid var(--primary-color);
+ padding: 10px;   
+
+
+}
+
+.card-item{
+ border-radius: 5px;
+}
+
+.cover{
+   width: 100%;
+   height: 270px;
+}
+
+.cover img{
+   width: 100%;
+   height: 100%;
+   border-radius: 3px;
+}
+
+.layer{
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-color: rgba(151, 207, 206, 0.7);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   color: white;
+   font-weight: bold;
+   transform: translateY(100%);
+   transition: transform 0.3s ease-in-out;
+   pointer-events: none;
+}
+
+.layer-items{
+   display: flex;
+   align-items: center;
+   gap: 10px;
+}
+
+.layer-item-section{
+   display: flex;
+   align-items: center;
+   background-color: var(--primary-color);
+   padding: 10px;
+   border-radius: 50%;
+   
+}
+
+.layer-item-section svg{
+   height: 20px;
+   width: 20px;
+}
+
+.card-upper-section:hover .layer {
+   transform: translateY(0);
+}
+
+.card-lower-section{
+   display: flex;
+   justify-content: space-between;
+   align-items:flex-start;
+   flex-direction:  column;
+   gap: 12px;
+   padding: 5px;
+}
+.book-genre h5{
+   font-weight: 400;
+   font-family: "Lato", sans-serif;
+   font-size: 14px;
+   color : grey;
+   overflow: hidden;
+   display: -webkit-box;
+   -webkit-line-clamp: 1;
+   -webkit-box-orient: vertical;
+}
+.book-name h4{
+   font-weight: 500;
+   font-family: "Lato", sans-serif;
+   font-size: 20px;
+   overflow: hidden;
+   display: -webkit-box;
+   -webkit-line-clamp: 1;
+   -webkit-box-orient: vertical;
+}
+
+.prize-flex{
+   display: flex;
+   gap: 5px;
+   align-items: center;
+}
+
+.prize-flex h5{
+   font-weight: 500;
+   font-family: "Lato", sans-serif;
+   font-size: 16px;
+   font-weight: 700;
+}
+
+.book-info span{
+   font-weight: 500;
+   font-family: "Lato", sans-serif;
+   font-size: 14px;
+   color : var(--primary-color)
+}
+
+.book-info {
+   display: flex;
+   justify-content: space-between;
+   gap: 4px;
+   flex-direction: column;
+   width: 100%;
+}
+
+.book-info > div:last-child {
+   width: 100%;
+   margin-top: 8px;
+}
+
+.btn-31,
+.btn-31 *,
+.btn-31 :after,
+.btn-31 :before,
+.btn-31:after,
+.btn-31:before {
+  border: 0 solid;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.btn-31 {
+  width: 100%;
+  display: block;
+
+  -webkit-tap-highlight-color: transparent;
+   -webkit-appearance: button;
+  background-color:var(--primary-color);
+  background-image: none;
+  color: white;
+  cursor: pointer;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
+    Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  font-size: 100%;
+  font-weight: 900;
+  line-height: 1.5;
+  margin: 0;
+  -webkit-mask-image: -webkit-radial-gradient(#000, #fff);
+  padding: 0;
+}
+
+.btn-31:disabled {
+  cursor: default;
+}
+
+.btn-31:-moz-focusring {
+  outline: auto;
+}
+
+.btn-31 svg {
+  display: block;
+  vertical-align: middle;
+}
+
+.btn-31 [hidden] {
+  display: none;
+}
+
+.btn-31 {
+  border-width: 1px;
+  padding: 10px ;
+  width: 100%;
+  position: relative;
+  text-transform: uppercase;
+}
+
+.btn-31:before {
+  --progress: 100%;
+  background: #fff;
+  border: 1px solid var(--primary-color);
+  -webkit-clip-path: polygon(
+    100% 0,
+    var(--progress) var(--progress),
+    0 100%,
+    100% 100%
+  );
+  clip-path: polygon(
+    100% 0,
+    var(--progress) var(--progress),
+    0 100%,
+    100% 100%
+  );
+  content: "";
+  inset: 0;
+  position: absolute;
+  transition: -webkit-clip-path 0.2s ease;
+  transition: clip-path 0.2s ease;
+  transition: clip-path 0.2s ease, -webkit-clip-path 0.2s ease;
+}
+
+.btn-31:hover:before {
+  --progress: 0%;
+}
+
+.btn-31 .text-container {
+  display: block;
+  overflow: hidden;
+  position: relative;
+}
+
+.btn-31 .text {
+  display: block;
+  font-weight: 900;
+  mix-blend-mode: difference;
+  position: relative;
+  width: 100%;
+  text-align: center;
+}
+
+.btn-31:hover .text {
+  -webkit-animation: move-up-alternate 0.3s ease forwards;
+  animation: move-up-alternate 0.3s ease forwards;
+}
+
+@-webkit-keyframes move-up-alternate {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(80%);
+  }
+
+  51% {
+    transform: translateY(-80%);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes move-up-alternate {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(80%);
+  }
+
+  51% {
+    transform: translateY(-80%);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}

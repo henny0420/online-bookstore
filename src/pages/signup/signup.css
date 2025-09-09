@@ -1,0 +1,173 @@
+.sign-up-body {
+    font-family: 'Inter', sans-serif;
+    background: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: #333;
+}
+
+.signup-container {
+    background: #fff;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    border: 2px solid var(--primary-color);
+}
+
+
+.signup-container h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.signup-container p {
+    font-size: 1rem;
+    color: #7f8c8d;
+    margin-bottom: 2rem;
+}
+
+.signup-input-group {
+    margin: 1.5em 0;
+    width: 100%;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.signup-input-group input {
+    font-size: 100%;
+    padding: 1.2em 1em 0.6em;
+    outline: none;
+    border: 2px solid rgb(200, 200, 200);
+    background-color: transparent;
+    border-radius: 8px;
+    width: 100%;
+    box-sizing: border-box;
+    transition: all 0.2s ease;
+}
+
+.signup-input-group label {
+    position: absolute;
+    left: 1em;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #666;
+    pointer-events: none;
+    transition: all 0.2s ease;
+    background: white;
+    padding: 0 0.4em;
+    margin: 0 0.2em;
+    font-size: 1rem;
+    font-weight: normal;
+}
+
+.signup-input-group input:focus,
+.signup-input-group input:not(:placeholder-shown) {
+    border-color: var(--primary-color);
+}
+
+.signup-input-group input:focus ~ label,
+.signup-input-group input:not(:placeholder-shown) ~ label {
+    top: 0;
+    transform: translateY(-50%) scale(0.9);
+    color: var(--primary-color);
+    background: white;
+    padding: 0 0.6em;
+    left: 0.8em;
+
+   
+}
+
+/* Focus styles are now handled by the input:focus selector above */
+
+/* From Uiverse.io by Maximinodotpy */ 
+.inputGroup {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 1em 0;
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+}
+  
+  .inputGroup input {
+    font-size: 100%;
+    padding: 0.8em 1em;
+    outline: none;
+    border: 2px solid rgb(200, 200, 200);
+    background-color: transparent;
+    border-radius: 20px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .inputGroup label {
+    font-size: 100%;
+    position: absolute;
+    left: 0;
+    padding: 0.8em;
+    margin-left: 0.5em;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    color: var(--primary-color);
+  }
+  
+  .inputGroup input:focus ~ label,
+  .inputGroup input:not(:placeholder-shown) ~ label {
+    transform: translateY(-50%) scale(.9);
+    margin: 0em;
+    margin-left: 1.3em;
+    padding: 0.4em;
+    background-color: #fff;
+  }
+  
+  .inputGroup input:focus,
+  .inputGroup input:not(:placeholder-shown) {
+    border-color:var(--primary-color);
+  }
+
+.signup-button {
+    width: 100%;
+    padding: 1rem;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.signup-button:hover {
+    background: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+.signup-button:active {
+    transform: translateY(0);
+}
+
+.create-account {
+    margin-top: 1.5rem;
+}
+
+.create-account a {
+    font-size: 0.9rem;
+    color: #34495e;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s ease-in-out;
+}
+
+.create-account a:hover {
+    color: #2c3e50;
+    text-decoration: underline;
+}

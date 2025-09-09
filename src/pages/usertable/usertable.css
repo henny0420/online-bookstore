@@ -1,0 +1,33 @@
+.users-table{
+    padding: 10px;
+
+}
+table{
+    border: 0.5px solid rgb(178, 177, 177);
+}
+.users-table thead{
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.users-table svg{
+    color: white;
+
+}
+
+.users-table td:hover svg{
+    color: var(--primary-color);
+}
+
+.users-table td:hover button{
+    background-color: white;
+}
+.users-table button{
+    background-color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    border-radius: 10px;
+}
+
+.users-table tbody td:last-child:hover{
+    background-color: rgb(229, 229, 229);
+}
