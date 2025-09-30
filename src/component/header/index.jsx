@@ -1,15 +1,23 @@
-import React, { useState } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
 import './header.css';
 import logo22 from '../../assets/logo22.png';
 import { Search, UserPen, Heart, ShoppingCart, Grip, ChevronDown } from "lucide-react";
 import { Link } from "react-router";
+import CartContext from "../../config/context/cartcontext";
 // import { library_database } from "../../database/data";
 
 
 export default function Header({on_search_item,on_search_option}) { 
 
-    // const [search_item, setSearch_item] = useState(library_database);
-    // const [search_option, setSearch_option] = useState('search by');
+    const {number} = useContext(CartContext)
+
+   const search_focus_ref=useRef(null)
+
+   useEffect(()=>{
+
+    search_focus_ref.current.focus();
+
+   },[]);
 
     const handle_search = (ev) => {
 
@@ -48,7 +56,7 @@ export default function Header({on_search_item,on_search_option}) {
 
                         <div className="input-section">
 
-                            <input type="text" placeholder="search Books..." id="search"
+                            <input type="text" placeholder="search Books..." id="search" ref={search_focus_ref}
                                 onChange={(ev) =>   handle_search(ev)   } ></input>
 
                             <div className="search-by">
@@ -86,9 +94,12 @@ export default function Header({on_search_item,on_search_option}) {
                             </div>
                             <div className="verticle-line"></div>
 
+                            <Link to="/cart" style={{ textDecoration: 'none' }}> 
                             <div className="cart">
                                 <ShoppingCart />
+                                <p>  {number} </p>
                             </div>
+                            </Link>
                         </div>
                     </div>
                 </div>

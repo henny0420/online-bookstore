@@ -13,6 +13,9 @@ import ForgetPassword from './pages/forgetpassword'
 import Discription from './pages/discription'
 import Userdetails from './pages/userdetails'
 import UserTable from './pages/usertable'
+import USeredit from './pages/userdetails/useredit'
+import ContextProvider from './component/contextProvider.jxs'
+import Cart from './pages/cart'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -51,19 +54,30 @@ function App() {
 
     },
     {
+      path : '/userdetails/:firstName',
+      element : <USeredit/>
+
+    },
+    {
       path : '/usertable',
       element : <UserTable/>
+
+    },
+    {
+      path : '/cart',
+      element : <Cart/>
 
     }
   
   ])
 
+
   return (
     <>
-
+    
       <RouterProvider router={router} />
-      {/* <Data/> */}
-      {/* <Form/> */}
+      
+      
     </>
   )
 }

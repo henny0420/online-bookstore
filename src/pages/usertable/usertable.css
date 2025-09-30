@@ -15,12 +15,18 @@ table{
 
 }
 
-.users-table td:hover svg{
+/* .users-table td:hover svg{
     color: var(--primary-color);
+} */
+
+.users-table button:hover {
+    background-color: white;
+    
 }
 
-.users-table td:hover button{
-    background-color: white;
+.users-table button:hover svg{
+    color: var(--primary-color);
+
 }
 .users-table button{
     background-color: var(--primary-color);

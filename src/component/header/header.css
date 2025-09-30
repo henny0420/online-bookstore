@@ -80,7 +80,7 @@
     border: 0;
     color: var(--primary-color);
     outline: none;
-    border: 1px solid var(--color-white);
+    /* border: 1px solid var(--color-white); */
 }
 
 .input-section input::placeholder{
@@ -302,4 +302,23 @@
 
 .catagory-dropdown span:last-child{
     border-bottom: none;
+}
+
+.cart{
+    position: relative;
+}
+
+.cart p{
+    position: absolute;
+    top: -6px;
+    right: -5px;
+    color: black;
+    background-color: yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    font-size: 12px;
 }

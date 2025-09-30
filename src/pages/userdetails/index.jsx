@@ -1,44 +1,14 @@
 import React, { useEffect, useState } from "react";
 import "./userdetails.css";
-import { useNavigate } from "react-router";
+import { useNavigate, useParams } from "react-router";
 
 export default function Userdetails() {
     
-    const [user_input, setUserInput] = useState({})
+    
+    const [userInput, setUserInput] = useState({})
     
     const navigate = useNavigate();
     
-    //form validator for user input
-    
-        // const [show_error,setShow_error] =useState({})
-
-        // const validator = (ev) => {
-
-        //     let form_validated = true
-        //     let error={}
-
-        //     if(!user_input.email || user_input.email.trim() == ' '){
-        //         form_validated = false
-        //         error.email ='please enter email'
-        //     }
-
-        //     if(!user_input.password || user_input.password.length < 6){
-        //         form_validated = false
-        //         error.password ='please enter longer password'
-        //     }
-
-        //     if(!user_input.firstName || !user_input.lastName){
-        //         form_validated = false
-        //         error.name = 'this field is mendatory'
-        //     }
-        //     setShow_error(error)
-
-        //     return form_validated
-
-        // }
-
-
-
     
     //----storing user's entered data in array 
     
@@ -51,7 +21,8 @@ export default function Userdetails() {
     });
     
     useEffect(() => {
-        
+
+       
         localStorage.setItem('user_data', JSON.stringify(user_data));
         
     }, [user_data]);
@@ -61,7 +32,7 @@ export default function Userdetails() {
 
     const handle_user_stored_data = (ev) => {
 
-        setUser_data([...user_data, user_input]);
+        setUser_data([...user_data, userInput]);
         
     }
 // }
@@ -75,7 +46,7 @@ export default function Userdetails() {
     const handle_user_input = (ev) => {
 
         const { value, name, checked, type } = ev.target;
-        
+         let user_id=(user_data.length)+1
         
         // setShow_error({...show_error,[name]:''})
 
@@ -84,14 +55,14 @@ export default function Userdetails() {
 
         if (type === 'checkbox') {
 
-            let selected_genre = user_input?.genre?.length > 0 ? [...user_input.genre] : [];
+            let selected_genre = userInput?.genre?.length > 0 ? [...userInput.genre] : [];
             let genre;
             selected_genre.push(value);
 
             if (checked) {
                 setUserInput(
                     {
-                        ...user_input,
+                        ...userInput,
                         genre: selected_genre
                     }
                 )
@@ -100,7 +71,7 @@ export default function Userdetails() {
 
                 setUserInput(
                     {
-                        ...user_input,
+                        ...userInput,
                         genre: selected_genre.filter((val) => val != value)
                     }
                 )
@@ -114,23 +85,20 @@ export default function Userdetails() {
             setUserInput(
 
                 {
-                    ...user_input,
-                    [name]: value
+                    ...userInput,
+                    [name]: value,
+                    id : user_id
                 }
 
             )
         }
-        console.log(user_input);
+        console.log(userInput);
 
     }
 
 
-//-----end----
-
-
-
-
-    return (
+// -----end----
+ return (
         <div className="userdetails-body">
             <div className="form-container">
 
@@ -146,11 +114,12 @@ export default function Userdetails() {
                         <label htmlFor="firstName">First Name</label>
                         <input
 
+                            // value={user.firstName || ''}
                             type="text"
                             id="firstName"
                             name="firstName"
                             required
-                            placeholder=" "
+                            placeholder=''
 
                             onChange={(ev) => handle_user_input(ev)}
 
@@ -290,7 +259,7 @@ export default function Userdetails() {
 
                             id="language"
                             name="language"
-                            value={user_input.language}
+                            value={userInput.language}
 
                             // onChange={(ev)=> console.log(ev)
 

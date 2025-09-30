@@ -65,6 +65,11 @@ export default function Book_discription(props) {
                         <button onClick={() => handle_increase()}>+</button>
                     </div>
                 </div>
+                <div className='btn-add'>
+                       
+                       <button>Add to cart</button>
+
+                    </div>
                 
                 
             </div>

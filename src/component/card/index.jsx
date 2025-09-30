@@ -1,12 +1,16 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router";
 // import  {library_database}  from '../database/data.js';
 import './card.css';
 import { Heart, ShoppingCart, Star } from "lucide-react";
+import CartContext from "../../config/context/cartcontext";
 
 
 export function Card(props) {
 
+   const {add_to_cart} = useContext(CartContext)
+//    console.log(add_to_cart(props));
+   
 
     return (
         <div className="card-item">
@@ -16,13 +20,19 @@ export function Card(props) {
                     <div className="layer">
                         <div className="layer-items">
                             <div className="layer-item-section">
+                                <button>
                                 <Heart />
+                                </button>
                             </div>
                             <div className="layer-item-section">
+                                <button onClick={() => add_to_cart(props)}>
                                 <ShoppingCart />
+                                </button>
                             </div>
                             <div className="layer-item-section">
+                                <button>
                                 <Star />
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -44,7 +54,9 @@ export function Card(props) {
                             {props?.price}</h5>
                     </div>
                     <div>
-                        <button className="btn-31">
+                        <button className="btn-31" onClick={() => add_to_cart(props)  }>
+                            
+                        
                             <span className="text-container">
                                 <span className="text">Add to cart</span>
                             </span>

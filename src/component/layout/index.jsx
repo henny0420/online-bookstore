@@ -34,7 +34,7 @@ export default function Layout() {
                 return bookName.includes(searchVal);
 
             }
-             else if (searchOption === 'author') {
+            else if (searchOption === 'author') {
 
                 return authors.some(author => 
 
@@ -89,9 +89,13 @@ export default function Layout() {
     const filteredBooks = filterBooks();
 
     return(
+
         <>
             <Header on_search_item={setSearchItem} on_search_option={setSearchOption} />
-            <Home Books={filteredBooks} />   
+            <main>
+               <Outlet context={{ books: filteredBooks }} />
+         </main>
         </>
+
     )
 }
